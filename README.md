@@ -1,56 +1,46 @@
-# Welcome to your Expo app 👋
+# Custom Language Learning App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+An app that allows you to store custom language flash cards.
 
-## Get started
+Created by Isaac Day for CSE 310 (Mobile App module). Create your own "languages" (word dictionaries), add words and their meanings, and study them as flashcards. The app shows a word, you tap to reveal its meaning, and then move on to the next card. All data is saved on the device with AsyncStorage, so it is still there after the app is closed.
 
-1. Install dependencies
+## Instructions for Build and Use
 
-   ```bash
-   npm install
-   ```
+Steps to build and/or run the software:
 
-2. Start the app
+1. Install [Node.js](https://nodejs.org/) (LTS version) and clone this repository.
+2. In the project folder, run `npm install` to download the dependencies.
+3. Run `npx expo start`, then press `w` to open the app in a web browser, or scan the QR code with the Expo Go app on a phone.
 
-   ```bash
-   npx expo start
-   ```
+Instructions for using the software:
 
-In the output, you'll find options to open the app in a
+1. On the **Languages** tab, type a language name (for example "Spanish") and tap **Add**.
+2. Tap the language to open it, type a word and its meaning, and tap **Add Word**. Repeat for more words.
+3. Open the **Study** tab and choose a language. Tap the flashcard to reveal the meaning, then tap **Next →** to go to the next word.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Development Environment
 
-You can start developing by editing the files inside the **src/app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+To recreate the development environment, you need the following software and/or libraries with the specified versions:
 
-## Get a fresh project
+* Node.js 24.19.0 and npm 11.17.0
+* Expo SDK 58 (`expo` ~58.0.13) with Expo Router ~58.0.22, React Native 0.88.0, React 19.3.0, and TypeScript ~6.0.3
+* @react-native-async-storage/async-storage 2.2.0 (installed with `npx expo install`)
+* Visual Studio Code as the editor; tested in a web browser through `npx expo start --web`
 
-When you're ready, run:
+## Useful Websites to Learn More
 
-```bash
-npm run reset-project
-```
+* ["Create an App with React Native"](https://www.youtube.com/watch?v=1ETOJloLK3Y)
+* [Getting Started with React Native](https://reactnative.dev/docs/getting-started)
+* [Expo Router introduction](https://docs.expo.dev/router/introduction/)
+* [React Native core components and APIs](https://reactnative.dev/docs/components-and-apis)
+* [React `useState` reference](https://react.dev/reference/react/useState)
+* [AsyncStorage usage docs](https://react-native-async-storage.github.io/async-storage/docs/usage)
+* [Expo: splash screen and app icon](https://docs.expo.dev/develop/user-interface/splash-screen-and-app-icon/)
 
-This command will move the starter code to the **example** directory and create a blank **src/app** directory where you can start developing.
+## Future Work
 
-### Other setup steps
+The following items I plan to fix, improve, and/or add to this project in the future:
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+* [ ] Edit and delete languages and words
+* [ ] Shuffle the flashcards and track which words I got right or wrong
+* [ ] Make a real build with EAS so the custom app icon shows on a phone's home screen
