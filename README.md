@@ -16,7 +16,8 @@ Instructions for using the software:
 
 1. On the **Languages** tab, type a language name (for example "Spanish") and tap **Add**.
 2. Tap the language to open it, type a word and its meaning, and tap **Add Word**. Repeat for more words.
-3. Open the **Study** tab and choose a language. Tap the flashcard to reveal the meaning, then tap **Next →** to go to the next word.
+3. To fix a word, tap it to edit it and tap **Save**, or tap the red **✕** to delete it. Use **Rename language** to change a language's name, or tap **Delete language** twice to delete it with all its words.
+4. Open the **Study** tab and choose a language. Tap the flashcard to reveal the meaning, then tap **Next →** to go to the next word.
 
 ## Development Environment
 
@@ -41,6 +42,6 @@ To recreate the development environment, you need the following software and/or 
 
 The following items I plan to fix, improve, and/or add to this project in the future:
 
-* [ ] Edit and delete languages and words
+* [x] Edit and delete languages and words
 * [ ] Shuffle the flashcards and track which words I got right or wrong
 * [ ] Make a real build with EAS so the custom app icon shows on a phone's home screen

@@ -61,5 +61,6 @@ export const Spacing = {
   six: 64,
 } as const;
 
-export const BottomTabInset = Platform.select({ ios: 50, android: 80 }) ?? 0;
+// Extra bottom padding so screen content isn't hidden behind the tab bar.
+export const BottomTabInset = Platform.select({ ios: 50, android: 80, web: 80 }) ?? 0;
 export const MaxContentWidth = 800;

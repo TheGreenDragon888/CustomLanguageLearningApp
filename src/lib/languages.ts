@@ -39,3 +39,17 @@ export async function loadLanguages(): Promise<Language[]> {
 export async function saveLanguage(language: Language): Promise<void> {
   await AsyncStorage.setItem(KEY_PREFIX + language.name, JSON.stringify(language)); // object -> JSON text
 }
+
+// Delete one language (and all of its words) from storage.
+export async function deleteLanguage(name: string): Promise<void> {
+  await AsyncStorage.removeItem(KEY_PREFIX + name);
+}
+
+// Rename a language. The storage key includes the name, so we save under the new
+// key FIRST and only then remove the old key — if something fails, no data is lost.
+export async function renameLanguage(oldName: string, language: Language): Promise<void> {
+  await saveLanguage(language);
+  if (oldName !== language.name) {
+    await deleteLanguage(oldName);
+  }
+}
