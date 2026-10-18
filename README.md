@@ -4,6 +4,8 @@ An app that allows you to store custom language flash cards.
 
 Created by Isaac Day for CSE 310 (Mobile App module). Create your own "languages" (word dictionaries), add words and their meanings, and study them as flashcards. The app shows a word, you tap to reveal its meaning, and then move on to the next card. All data is saved on the device with AsyncStorage, so it is still there after the app is closed.
 
+[Video Demonstration](https://youtu.be/GgiCccqUY6I)
+
 ## Instructions for Build and Use
 
 Steps to build and/or run the software:
